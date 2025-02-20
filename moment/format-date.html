@@ -1,0 +1,74 @@
+<script type="text/html" data-template-name="date-formatter">
+    <div class="form-row">
+      <label for="node-input-input_key"
+        ><i class="fa fa-arrow-right"></i> Input property</label
+      >
+      <input
+        type="text"
+        id="node-input-input_key"
+        style="width: 70%;"
+        placeholder="property name in msg.payload or empty for all"
+      />
+    </div>
+    <div class="form-row">
+      <label style="width:auto" for="node-input-format"
+        ><i class="fa fa-calendar"></i> Date Format</label
+      >
+      <input
+        type="text"
+        id="node-input-format"
+        style="width: 70%;"
+        placeholder="e.g. YYYY-MM-DD HH:mm:ss"
+      />
+    </div>
+    <div class="form-row">
+      <label for="node-input-output_key"
+        ><i class="fa fa-solid fa-arrow-left"></i> Output property</label
+      >
+      <input
+        type="text"
+        id="node-input-output_key"
+        style="width: 70%;"
+        placeholder="property name"
+      />
+    </div>
+    <div class="form-row">
+      <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+      <input type="text" id="node-input-name" placeholder="Name" />
+    </div>
+    <div class="form-tips" style="font-size:83%">
+     Node for formatting date values using Moment.js library.
+    </div>
+  </script>
+<script type="text/html" data-help-name="date-formatter">
+    <p>Date Formatter Node.</p>
+    <p>
+      Uses the
+      <a href="https://momentjs.com/docs/">Moment.js library</a>
+      to format date values.
+    </p>
+    <p>
+      The output is a formatted date string according to the specified format.
+    </p>
+  </script>
+<script type="text/javascript">
+    RED.nodes.registerType("date-formatter", {
+        category: "formats",
+        color: "#2D9596",
+        defaults: {
+            name: { value: "" },
+            input_key: { value: "" },
+            output_key: { value: "" },
+            format: { value: "YYYY-MM-DD HH:mm:ss" },
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "icon-calendar.svg",
+        label: function () {
+            return this.name || "Date Formatter";
+        },
+        labelStyle: function () {
+            return this.name ? "node_label_italic" : "";
+        },
+    });
+</script>

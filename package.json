@@ -1,0 +1,40 @@
+{
+  "name": "node-red-format-date",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "moment": "^2.29.0"
+  },
+  "devDependencies": {
+    "@types/node-red": "^1.1.0"
+  },
+  "keywords": [
+    "node-red",
+    "moment",
+    "momentjs",
+    "time",
+    "duration"
+  ],
+  "node-red": {
+    "version": ">=3",
+    "nodes": {
+      "humanizer": "moment/format-date.js"
+    },
+    "notyetnodes": {}
+  },
+  "engines": {
+    "node": ">=14.14"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "maintained node versions",
+    "last 2 versions",
+    "not dead",
+    "not ie < 11"
+  ],
+  "main": "moment/format-date.js",
+  "license": "MIT"
+}
